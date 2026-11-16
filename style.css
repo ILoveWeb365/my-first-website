@@ -1,0 +1,172 @@
+/* variables */
+
+:root{
+        --primary-color: #ad26fc;
+        --white-color: #fff;
+}
+
+/* reset styles */
+
+body{
+        font-family: sans-serif;
+}
+
+*{
+        box-sizing: border-box;
+}
+
+input{
+        width: 100%;
+        border-radius: 4px;
+        border: none;
+        outline: none;
+}
+
+button{
+        font-size: inherit;
+        font-family: inherit;
+        width: 100%;
+        border: none;
+}
+
+label{
+        display: block;
+}
+
+input[type=radio]{
+        display: none;
+}
+
+input:disabled, button:disabled, input[type=radio]:disabled + label{
+        cursor: not-allowed;
+        opacity: 0.4;
+}
+
+input::-webkit-outer-spin-button, /* remove number nav buttons for Chrome, Safari, Edge, Opera */
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] { /* remove number nav buttons for Firefox */
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* universal styles */
+
+.btn{
+	padding: 10px;
+	text-align: center;
+	border-radius: 4px;
+	color: var(--white-color);
+}
+
+/* bill calc styles */
+
+.main-container{
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        gap: 30px;
+        align-items: start;
+}
+
+#custom-tip, #people-count{
+        padding: 8px;
+        background-color: #efd4ff;
+        font-size: 15px;
+}
+
+:is(#custom-tip, #people-count)::placeholder{
+        font-size: 15px;
+}
+
+.bill-input-wrapper{
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        border-radius: 4px;
+        padding-left: 8px;
+        background-color: #e7c2fd;
+}
+
+.bill-input-wrapper span{
+        color: var(--primary-color);
+}
+
+#bill-input{
+        padding: 8px 4px;
+        font-size: 20px;
+        color: var(--primary-color);
+        background-color: transparent;
+}
+
+.bill-calc-heading{
+        font-size: 20px;
+        color: var(--primary-color);
+        margin-bottom: 8px;
+}
+
+.bill-calc-row{
+        margin-bottom: 20px;
+}
+
+.tip-btns{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 15px;
+        margin-bottom: 12px;
+}
+
+input[type="radio"]:checked + label{
+        outline: 4px solid #eed70c;
+}
+
+.tip-btn label{
+        font-size: 18px;
+}
+
+.bill-calc-btn, .tip-btn label, .bill-reset-btn{
+        background-color: var(--primary-color);
+        cursor: pointer;
+}
+
+
+
+/* invoice styles */
+
+.invoice-container{
+        background-color: #f2f2f3;
+        padding: 25px;
+        border-radius: 4px;
+        outline: 1px dashed #9c9c9c;
+        outline-offset: -10px;
+}
+
+.invoice-inner-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 25px;
+        row-gap: 20px;
+        margin-bottom: 25px;
+        margin-top: 20px;
+        color: #494849;
+}
+
+.amount{
+        border-bottom: 0.5px dashed #a7a7a8;
+        text-align: right;
+}
+
+.bill-reset-btn{
+        background-color: #4e4e4e;
+}
+
+.invoice-name{
+        text-align: center;
+        text-transform: uppercase;
+        color: #5e5d5e;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+}
